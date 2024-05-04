@@ -1,5 +1,9 @@
 ## INTRO 
 
+### Reactive programming
+Reactive Programming is design pattern that focuses on using async and non blocking data streams to handle data and events. 
+
+
 #### Abstraction 
 Hiding the implementation details and showing only functionality to the user 
 
