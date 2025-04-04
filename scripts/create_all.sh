@@ -3,12 +3,16 @@
 # Define the output file
 OUTPUT_FILE="All.md"
 
+# Print the present working directory
+echo "Starting working directory: $(pwd)"
+
 # Navigate one folder back
 cd ..
 
-# Override the output file instead of removing it
-# Find all .md files one level above the current directory
-# Add the file name as a title before concatenating its content into the output file
+# Print the present working directory
+echo "Current working directory: $(pwd)"
+
+
 : > "$OUTPUT_FILE" # Truncate or create the output file
 find ../ -type f -name "*.md" | while read -r file; do
     echo "# $(basename "$file")" >> "$OUTPUT_FILE"
