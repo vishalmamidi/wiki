@@ -6,8 +6,6 @@ OUTPUT_FILE="All.md"
 # Print the present working directory
 echo "Starting working directory: $(pwd)"
 
-# Navigate one folder back
-cd ..
 
 # Print the present working directory
 echo "Current working directory: $(pwd)"
