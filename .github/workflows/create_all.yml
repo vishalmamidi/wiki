@@ -20,6 +20,9 @@ jobs:
       - name: Display directory structure
         run: tree
 
+      - name: show git diff
+        run: git diff
+
       - name: Commit and push changes
         run: |
           git config --global user.name "${{ github.actor }}"
