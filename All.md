@@ -28,12 +28,6 @@
 ### Q: Can we achieve full abstraction with abstract classes by adding only abstract methods?
 **A**: Technically, yes. Generally we dont do because main reason to use an abstract class to provide some common implementation (concrete methods)
 
-# README.md
-# docs
-
-this repo is used for my prep questions which will automatically creates `All.md` file which contains all the md data in one file 
-
-
 # java.md
 ## INTRO 
 
