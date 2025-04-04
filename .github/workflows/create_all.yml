@@ -17,6 +17,9 @@ jobs:
       - name: Run create_all.sh
         run: ./scripts/create_all.sh
 
+      - name: Display directory structure
+        run: tree -a
+
       - name: Commit and push changes
         run: |
           git config --global user.name "${{ github.actor }}"
