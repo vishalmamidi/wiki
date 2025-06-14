@@ -56,9 +56,180 @@ Yes but JVM only call one with `public static void main(string[] args)`
 
 
 
-# java-collections.md
-## List Set Queue Map
+# Me.md
 
+
+# k8s.md
+https://www.geeksforgeeks.org/kubernetes-interview-questions/
+
+Kube-apiserver
+master node - worker node 
+node - smallet unit of compuring hardware
+kube-scheduler
+The Google Container Engine
+Daemon sets
+Heapster
+initial namespaces ( defaut public system )
+Kubernetes controller manager
+types of controller managers ( endpoints controller, service accounts controller, 
+  namespace controller, node controller, token controller, and replication controller )
+etcd 
+services in Kubernetes
+Ingress
+replica set and a replication controller
+headless service
+federated clusters
+Kubelet
+Kube-proxy
+HPA
+StatefulSet and a Deployment
+Service in Kubernetes
+configmaps
+Persistent Volume (PV)
+DaemonSet and a ReplicaSet
+ Custom Resources in Kubernetes
+  Taints and Tolerations
+  Kubernetes control plane
+  
+
+
+
+
+
+# All.md
+
+
+# java-8-features.md
+# Java 8 Features - Questions and Answers
+
+## Q1: What is the purpose of Lambda Expressions in Java 8?
+**A:** Lambda Expressions provide a clear and concise way to represent a single method interface using an expression. They enable functional programming and reduce boilerplate code.
+
+---
+
+## Q2: What is a Functional Interface in Java 8?
+**A:** A Functional Interface is an interface with exactly one abstract method. It can be represented using a lambda expression. Examples include `Runnable`, `Callable`, and `Comparator`.
+
+---
+
+## Q3: What is the Stream API in Java 8?
+**A:** The Stream API is used to process collections of data in a functional style. It supports operations like filtering, mapping, and reducing, making it easier to work with collections.
+
+---
+
+## Q4: What is the purpose of the `Optional` class in Java 8?
+**A:** The `Optional` class is used to handle null values gracefully and avoid `NullPointerException`. It provides methods like `isPresent()`, `orElse()`, and `ifPresent()`.
+
+---
+
+## Q5: What are Default Methods in Java 8?
+**A:** Default Methods allow interfaces to have method implementations. This helps in adding new methods to interfaces without breaking existing implementations.
+
+---
+
+## Q6: What is the new Date and Time API in Java 8?
+**A:** Java 8 introduced a new Date and Time API in the `java.time` package. It provides classes like `LocalDate`, `LocalTime`, and `LocalDateTime` for easier and more robust date-time manipulation.
+
+---
+
+## Q7: What is the purpose of the `forEach` method in Java 8?
+**A:** The `forEach` method is used to iterate over elements in a collection. It is a part of the `Iterable` interface and is often used with lambda expressions.
+
+---
+
+## Q8: What are Method References in Java 8?
+**A:** Method References are a shorthand notation of a lambda expression to call a method. They are represented using the `::` operator.
+
+---
+
+## Q9: What is the significance of the `Collectors` class in Java 8?
+**A:** The `Collectors` class provides utility methods for collecting stream elements into collections like lists, sets, or maps. It also supports aggregation operations like grouping and partitioning.
+
+---
+
+## Q10: What are the main benefits of Java 8 features?
+**A:** Java 8 features improve code readability, enable functional programming, reduce boilerplate code, and provide better tools for handling collections and date-time operations.
+
+
+# java.md
+## INTRO 
+
+### Reactive programming
+Reactive Programming is design pattern that focuses on using async and non blocking data streams to handle data and events. 
+
+
+ Abstraction 
+Hiding the implementation details and showing only functionality to the user 
+
+#### Abstract class
+To achive Abstraction we use abstract class but it it partial abstraction 
+
+#### interfaces
+ interfaces are blueprints, they define methods but not the implementation. helpfull in Multiple inheritance, clear contracts 
+
+**can we connect to 2 differnet Database in spring boot**
+Yes 
+Define separate configurations for each database connection in your application.yml
+Create JPA Repositories interfaces
+
+
+
+https://www.youtube.com/watch?v=aW68FHrLAmA
+
+### spirng boot 
+
+module of spring framework enalbes for rapid applaiction developement 
+by simpliying configuration, setup process, dependency management, embeded server (tomcat, jetty, netty)
+
+
+### starter projects 
+spring boot starter web, spring boot starter webflux, spring-boot-starter-data-jpa, spring-boot-starter-test, spring-boot-starter-acutator 
+
+### why spring boot over spring 
+easy to use , rapid application developement , auto configuration ,dependency management, embeded server
+
+
+### annoatations 
+SpringBootAppliaciton, Configuration, ComponentScan, EnableAutoConfiguration, 
+
+#### @Component
+mark a class as spring bean, which can be managed by spring container ConfigurationApplicationContext  
+
+#### @Autowired
+automatically inject dependencys of one class into another class 
+
+#### @Service
+mark a class as a service component to write some business logic 
+
+#### @RestController (includes @Controller @ResponceBody )
+to create REST API we use RestController annotation so it can return json responces to that endpoints.
+
+#### @Controller 
+
+#### RequestMapping
+#### Repository 
+DB Logic 
+
+#### thymeleaf 
+java service side template engine 
+
+
+### IOC  inversion of control
+manages ojbjects in spring 
+
+### bean
+simple plane java object in spring tearm which is managed by spring container(IOC Container) 
+
+### spring bean lifecycle 
+
+container start --> bean create --> dependency create --> dependency inject --> destroy
+
+### 
+
+
+# java-ds.md
+## List Set Queue Map
+```
 java.lang.Iterable (`interface`)
 └── java.util.Collection (`interface`)
     ├── java.util.List (`interface`)
@@ -97,6 +268,7 @@ java.util.Map (`interface`) *(Separate from Collection)*
 └── java.util.concurrent.ConcurrentMap (`interface`) *(Thread-safe)*
     ├── java.util.concurrent.ConcurrentHashMap (`class`)
     └── java.util.concurrent.ConcurrentSkipListMap (`class`)
+```
 
 ## Utility Classes
 - `java.util.Collections` (class)
@@ -122,6 +294,12 @@ java.util.Map (`interface`) *(Separate from Collection)*
 **A:** Because `Map` stores key-value pairs while `Collection` stores individual elements.
 
 ---
+
+#### Q: `HashMap` vs `LinkedHashMap` vs `TreeMap`  
+**A:** HashMap: no insertion order - LinkedHashMap: maintains insertion order - TreeMap: keeps values sorted
+
+---
+
 
 #### Q: When should I use `ArrayList` vs `LinkedList`?  
 **A:**  
@@ -217,176 +395,5 @@ java.util.Map (`interface`) *(Separate from Collection)*
 **A:**  
 - `poll()`: Returns `null` if queue is empty  
 - `remove()`: Throws `NoSuchElementException` if queue is empty
-
-
-# Me.md
-
-
-# java.md
-## INTRO 
-
-### Reactive programming
-Reactive Programming is design pattern that focuses on using async and non blocking data streams to handle data and events. 
-
-
- Abstraction 
-Hiding the implementation details and showing only functionality to the user 
-
-#### Abstract class
-To achive Abstraction we use abstract class but it it partial abstraction 
-
-#### interfaces
- interfaces are blueprints, they define methods but not the implementation. helpfull in Multiple inheritance, clear contracts 
-
-**can we connect to 2 differnet Database in spring boot**
-Yes 
-Define separate configurations for each database connection in your application.yml
-Create JPA Repositories interfaces
-
-
-
-https://www.youtube.com/watch?v=aW68FHrLAmA
-
-### spirng boot 
-
-module of spring framework enalbes for rapid applaiction developement 
-by simpliying configuration, setup process, dependency management, embeded server (tomcat, jetty, netty)
-
-
-### starter projects 
-spring boot starter web, spring boot starter webflux, spring-boot-starter-data-jpa, spring-boot-starter-test, spring-boot-starter-acutator 
-
-### why spring boot over spring 
-easy to use , rapid application developement , auto configuration ,dependency management, embeded server
-
-
-### annoatations 
-SpringBootAppliaciton, Configuration, ComponentScan, EnableAutoConfiguration, 
-
-#### @Component
-mark a class as spring bean, which can be managed by spring container ConfigurationApplicationContext  
-
-#### @Autowired
-automatically inject dependencys of one class into another class 
-
-#### @Service
-mark a class as a service component to write some business logic 
-
-#### @RestController (includes @Controller @ResponceBody )
-to create REST API we use RestController annotation so it can return json responces to that endpoints.
-
-#### @Controller 
-
-#### RequestMapping
-#### Repository 
-DB Logic 
-
-#### thymeleaf 
-java service side template engine 
-
-
-### IOC  inversion of control
-manages ojbjects in spring 
-
-### bean
-simple plane java object in spring tearm which is managed by spring container(IOC Container) 
-
-### spring bean lifecycle 
-
-container start --> bean create --> dependency create --> dependency inject --> destroy
-
-### 
-
-
-# All.md
-
-
-# java-8-features.md
-# Java 8 Features - Questions and Answers
-
-## Q1: What is the purpose of Lambda Expressions in Java 8?
-**A:** Lambda Expressions provide a clear and concise way to represent a single method interface using an expression. They enable functional programming and reduce boilerplate code.
-
----
-
-## Q2: What is a Functional Interface in Java 8?
-**A:** A Functional Interface is an interface with exactly one abstract method. It can be represented using a lambda expression. Examples include `Runnable`, `Callable`, and `Comparator`.
-
----
-
-## Q3: What is the Stream API in Java 8?
-**A:** The Stream API is used to process collections of data in a functional style. It supports operations like filtering, mapping, and reducing, making it easier to work with collections.
-
----
-
-## Q4: What is the purpose of the `Optional` class in Java 8?
-**A:** The `Optional` class is used to handle null values gracefully and avoid `NullPointerException`. It provides methods like `isPresent()`, `orElse()`, and `ifPresent()`.
-
----
-
-## Q5: What are Default Methods in Java 8?
-**A:** Default Methods allow interfaces to have method implementations. This helps in adding new methods to interfaces without breaking existing implementations.
-
----
-
-## Q6: What is the new Date and Time API in Java 8?
-**A:** Java 8 introduced a new Date and Time API in the `java.time` package. It provides classes like `LocalDate`, `LocalTime`, and `LocalDateTime` for easier and more robust date-time manipulation.
-
----
-
-## Q7: What is the purpose of the `forEach` method in Java 8?
-**A:** The `forEach` method is used to iterate over elements in a collection. It is a part of the `Iterable` interface and is often used with lambda expressions.
-
----
-
-## Q8: What are Method References in Java 8?
-**A:** Method References are a shorthand notation of a lambda expression to call a method. They are represented using the `::` operator.
-
----
-
-## Q9: What is the significance of the `Collectors` class in Java 8?
-**A:** The `Collectors` class provides utility methods for collecting stream elements into collections like lists, sets, or maps. It also supports aggregation operations like grouping and partitioning.
-
----
-
-## Q10: What are the main benefits of Java 8 features?
-**A:** Java 8 features improve code readability, enable functional programming, reduce boilerplate code, and provide better tools for handling collections and date-time operations.
-
-
-# k8s.md
-https://www.geeksforgeeks.org/kubernetes-interview-questions/
-
-Kube-apiserver
-master node - worker node 
-node - smallet unit of compuring hardware
-kube-scheduler
-The Google Container Engine
-Daemon sets
-Heapster
-initial namespaces ( defaut public system )
-Kubernetes controller manager
-types of controller managers ( endpoints controller, service accounts controller, 
-  namespace controller, node controller, token controller, and replication controller )
-etcd 
-services in Kubernetes
-Ingress
-replica set and a replication controller
-headless service
-federated clusters
-Kubelet
-Kube-proxy
-HPA
-StatefulSet and a Deployment
-Service in Kubernetes
-configmaps
-Persistent Volume (PV)
-DaemonSet and a ReplicaSet
- Custom Resources in Kubernetes
-  Taints and Tolerations
-  Kubernetes control plane
-  
-
-
-
 
 
