@@ -1,5 +1,5 @@
 ## List Set Queue Map
-
+```
 java.lang.Iterable (`interface`)
 └── java.util.Collection (`interface`)
     ├── java.util.List (`interface`)
@@ -38,6 +38,7 @@ java.util.Map (`interface`) *(Separate from Collection)*
 └── java.util.concurrent.ConcurrentMap (`interface`) *(Thread-safe)*
     ├── java.util.concurrent.ConcurrentHashMap (`class`)
     └── java.util.concurrent.ConcurrentSkipListMap (`class`)
+```
 
 ## Utility Classes
 - `java.util.Collections` (class)
@@ -63,6 +64,12 @@ java.util.Map (`interface`) *(Separate from Collection)*
 **A:** Because `Map` stores key-value pairs while `Collection` stores individual elements.
 
 ---
+
+#### Q: `HashMap` vs `LinkedHashMap` vs `TreeMap`  
+**A:** HashMap: no insertion order - LinkedHashMap: maintains insertion order - TreeMap: keeps values sorted
+
+---
+
 
 #### Q: When should I use `ArrayList` vs `LinkedList`?  
 **A:**  
